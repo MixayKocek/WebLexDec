@@ -1,0 +1,11 @@
+This is a very simple, quick-and-dirty app for doing lexical decision tasks via
+Internet. Works in modern Firefox and Chrome browsers.
+
+Long story short:
+- You can have different test sets ("styles"). There are two here: simp and trad.
+- For each style, you provide a list of primes followed by target items, in a file named *style*.js
+- To run the app point the browser to index.php?style=*style*&id=*id* where *style* is the style you
+want to use, and *id* is an id of the current test subject (you have to generate it yourself)
+- The results are saved in /tmp/*id*_test (for the test runs) and /tmp/*id*
+- You can group the prime-target pairs, and analyse them using analyse.rb (the output is: type interval answer)
+- If you modify wld.coffee, you have to regenerate wld.js (running make should be enough)
